@@ -3,7 +3,9 @@ require 'rest-client'
 
 class HomeEasy
 
-  LOGIN_ENDPOINT = 'http://homeeasy/cgi-bin/uservalid.cgi'
+	ROOT_URL = 'http://homeeasy/cgi-bin/'
+  LOGIN_ENDPOINT = ROOT_URL + 'uservalid.cgi'
+	ALL_ROOM_ENDPOINT = ROOT_URL + 'allroomdevice.cgi'
 
 	@session = nil
 

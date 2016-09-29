@@ -1,0 +1,94 @@
+{
+   "result" : "200",
+   "sessvalid" : "100",
+   "room" : [
+      {
+         "roomid" : 1,
+         "transmitter" : [],
+         "curtain" : [],
+         "switchdev" : [
+            {
+               "devid" : 3240,
+               "devname" : "Plug"
+            }
+         ],
+         "dimmer" : [
+            {
+               "devname" : "Ceiling lamp",
+               "devid" : 1465
+            }
+         ],
+         "therm" : [],
+         "roomtypeid" : 2,
+         "roomname" : "Living room"
+      },
+      {
+         "dimmer" : [],
+         "roomtypeid" : 5,
+         "therm" : [],
+         "roomname" : "Kitchen",
+         "roomid" : 2,
+         "transmitter" : [],
+         "curtain" : [],
+         "switchdev" : [
+            {
+               "devname" : "Celling lights",
+               "devid" : 1879
+            },
+            {
+               "devname" : "Surface light",
+               "devid" : 843
+            }
+         ]
+      },
+      {
+         "transmitter" : [],
+         "curtain" : [],
+         "switchdev" : [
+            {
+               "devid" : 689,
+               "devname" : "Clothes rail"
+            },
+            {
+               "devname" : "Fairy lights",
+               "devid" : 2509
+            }
+         ],
+         "roomid" : 3,
+         "therm" : [],
+         "roomtypeid" : 1,
+         "dimmer" : [],
+         "roomname" : "Master Bedroom"
+      },
+      {
+         "roomtypeid" : 4,
+         "therm" : [],
+         "dimmer" : [],
+         "roomname" : "Hall",
+         "switchdev" : [
+            {
+               "devname" : "Hall lights",
+               "devid" : 1345
+            }
+         ],
+         "curtain" : [],
+         "transmitter" : [],
+         "roomid" : 4
+      },
+      {
+         "roomtypeid" : 9,
+         "therm" : [],
+         "dimmer" : [],
+         "roomname" : " Garden ",
+         "curtain" : [],
+         "transmitter" : [],
+         "switchdev" : [
+            {
+               "devid" : 1466,
+               "devname" : "Decking"
+            }
+         ],
+         "roomid" : 5
+      }
+   ]
+}
