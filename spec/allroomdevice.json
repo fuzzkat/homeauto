@@ -40,55 +40,6 @@
                "devid" : 843
             }
          ]
-      },
-      {
-         "transmitter" : [],
-         "curtain" : [],
-         "switchdev" : [
-            {
-               "devid" : 689,
-               "devname" : "Clothes rail"
-            },
-            {
-               "devname" : "Fairy lights",
-               "devid" : 2509
-            }
-         ],
-         "roomid" : 3,
-         "therm" : [],
-         "roomtypeid" : 1,
-         "dimmer" : [],
-         "roomname" : "Master Bedroom"
-      },
-      {
-         "roomtypeid" : 4,
-         "therm" : [],
-         "dimmer" : [],
-         "roomname" : "Hall",
-         "switchdev" : [
-            {
-               "devname" : "Hall lights",
-               "devid" : 1345
-            }
-         ],
-         "curtain" : [],
-         "transmitter" : [],
-         "roomid" : 4
-      },
-      {
-         "roomtypeid" : 9,
-         "therm" : [],
-         "dimmer" : [],
-         "roomname" : " Garden ",
-         "curtain" : [],
-         "transmitter" : [],
-         "switchdev" : [
-            {
-               "devid" : 1466,
-               "devname" : "Decking"
-            }
-         ],
-         "roomid" : 5
       }
    ]
 }
