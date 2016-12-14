@@ -11,6 +11,8 @@ RSpec.describe HomeEasy, "#rooms" do
     end
     it "returns a list of rooms" do
       expect(homeeasy.rooms.size).to eq 2
+      expect(homeeasy.rooms.first).to be_a Room
+      expect(homeeasy.rooms.last).to be_a Room
     end
   end
 
