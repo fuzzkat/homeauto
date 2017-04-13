@@ -25,7 +25,7 @@ class HomeEasy
   end
 
   def off devid
-    @rest_client.post(ROOT_URL + DEVICE_CONTROL_ENDPOINT, { optype: 'singledev', devtype: 'switch', controltype: 'off', devid: devid })
+      @rest_client.post(ROOT_URL + DEVICE_CONTROL_ENDPOINT, { optype: 'singledev', devtype: 'switch', controltype: 'off', devid: devid })
   end
 
 end
