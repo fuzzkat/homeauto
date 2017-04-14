@@ -1,8 +1,6 @@
 require 'json'
 require 'rest-client'
-require File.dirname(__FILE__) + '/user_aware_rest_client'
-require File.dirname(__FILE__) + '/room'
-require File.dirname(__FILE__) + '/room_factory'
+require_relative 'user_aware_rest_client'
 
 class HomeEasy
 
@@ -12,7 +10,7 @@ class HomeEasy
 
   @rest_client
 
-  def initialize username, password, rest_client=UserAwareRestClient.new(username, password, ROOT_URL, RestClient), room_factory=RoomFactory.new
+  def initialize username, password, rest_client=UserAwareRestClient.new(username, password, ROOT_URL, RestClient)
     @rest_client = rest_client
   end
 
