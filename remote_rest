@@ -1,4 +1,4 @@
 #!/bin/bash
 
-bundle exec rackup -o 192.168.0.9 -p 7770 &
+bundle exec rackup -o 192.168.0.8 -p 7770 &
 bundle exec sidekiq -r ./app.rb

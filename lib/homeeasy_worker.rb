@@ -1,9 +1,12 @@
+require 'sidekiq/api'
 require_relative 'homeeasy'
 
 class HomeeasyWorker
 	include Sidekiq::Worker
 
-  @@homeeasy = HomeEasy.new(ENV["HOMEEASY_USER"], ENV["HOMEEASY_PASS"])
+  def initialize homeeasy=HomeEasy.new(ENV["HOMEEASY_USER"], ENV["HOMEEASY_PASS"])
+    @@homeeasy = homeeasy
+  end
 
 	def perform(device_id, state)
     case state
