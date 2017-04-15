@@ -3,6 +3,7 @@ require 'sidekiq/web'
 
 require_relative 'lib/homeeasy'
 require_relative 'lib/homeeasy_worker'
+require_relative 'lib/shell_worker'
 
 class App < Sinatra::Base
   homeeasy = HomeEasy.new(ENV["HOMEEASY_USER"], ENV["HOMEEASY_PASS"])
@@ -32,21 +33,23 @@ class App < Sinatra::Base
   get '/devices/:devid/on' do
     content_type :json
     HomeeasyWorker.perform_async(params['devid'], 'on')
-    response = GOOD_RESPONSE
+    GOOD_RESPONSE
   end
 
   get '/devices/:devid/off' do
     content_type :json
     # homeeasy.off params['devid']
     HomeeasyWorker.perform_async(params['devid'], 'off')
-    response = GOOD_RESPONSE
+    GOOD_RESPONSE
   end
 
   get '/mythtv/on' do
-    `/var/lib/mythtv/bin/alexa_mythtv_on`
+    ShellWorker.perform_async('mythtv', 'on')
+    GOOD_RESPONSE
   end
 
   get '/mythtv/off' do
-    `/var/lib/mythtv/bin/alexa_mythtv_off`
+    ShellWorker.perform_async('mythtv', 'off')
+    GOOD_RESPONSE
   end
 end
