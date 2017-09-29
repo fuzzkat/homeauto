@@ -38,8 +38,13 @@ class App < Sinatra::Base
 
   get '/devices/:devid/off' do
     content_type :json
-    # homeeasy.off params['devid']
     HomeeasyWorker.perform_async(params['devid'], 'off')
+    GOOD_RESPONSE
+  end
+
+  get '/scenes/:scenid' do
+    content_type :json
+    HomeeasyWorker.perform_async(params['scenid'], 'scene')
     GOOD_RESPONSE
   end
 

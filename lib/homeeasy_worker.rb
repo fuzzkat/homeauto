@@ -14,6 +14,8 @@ class HomeeasyWorker
       @@homeeasy.on device_id
     when 'off'
       @@homeeasy.off device_id
+    when 'scene'
+      @@homeeasy.scene device_id
     end
 	end
 end

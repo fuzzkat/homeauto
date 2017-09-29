@@ -7,6 +7,7 @@ class HomeEasy
 	ROOT_URL = 'http://homeeasy/cgi-bin/'
 	ALL_ROOM_ENDPOINT = 'allroomdevice.cgi'
   DEVICE_CONTROL_ENDPOINT = 'devicecontrol.cgi'
+  SCENE_CONTROL_ENDPOINT = 'scenoperation.cgi'
 
   @rest_client
 
@@ -23,7 +24,11 @@ class HomeEasy
   end
 
   def off devid
-      @rest_client.post(ROOT_URL + DEVICE_CONTROL_ENDPOINT, { optype: 'singledev', devtype: 'switch', controltype: 'off', devid: devid })
+    @rest_client.post(ROOT_URL + DEVICE_CONTROL_ENDPOINT, { optype: 'singledev', devtype: 'switch', controltype: 'off', devid: devid })
+  end
+
+  def scene scenid
+    @rest_client.post(ROOT_URL + SCENE_CONTROL_ENDPOINT, { optype: 'scenon', scenid: scenid })
   end
 
 end
